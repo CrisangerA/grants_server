@@ -19,7 +19,7 @@ export const getDataFromWebsite = async () => {
     //await page.screenshot({ path: 'example.png' });
 
     let grants = [];
-    for (let k = 0; k < 2; k++) {
+    for (let k = 0; k < 40; k++) { // 40 * 25 rows = 1000
       const items = await getDataFromTable(page);
       grants = [...grants, ...items];
       //console.log(grants.length);

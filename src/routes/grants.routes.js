@@ -14,7 +14,7 @@ router.get('/grants', async (req, res) => {
     return res.json(result);
   }
   result = await getAllGrants();
-  console.log(result.length);
+  //console.log(result.length);
   return res.json(result);
 });
 

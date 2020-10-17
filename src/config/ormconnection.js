@@ -13,7 +13,7 @@ export const connection = async () => {
       password: config.DB.PASSWORD,
       database: config.DB.DATABASE,
       entities: [
-        path.join(__dirname,'../entities/**/*.js')
+        path.join(__dirname, '../entities/**/*.js')
       ],
       synchronize: true,
     });
