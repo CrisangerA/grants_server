@@ -46,7 +46,7 @@ export const getDetailFromGrant = async (oppid) => {
     //const uri = await getUrlFromIframe();
     //const oppid = 329450;
     await page.goto(`https://www.grants.gov/custom/viewOppDetails.jsp?oppId=${oppid}`, { waitUntil: 'networkidle2' });
-
+    await page.waitForSelector(container);
     let detail = {};
     // Select rows left
     const lrows = await page.$$(`${container} #synopsisDetailsGeneralInfoTableLeft table tr`);
