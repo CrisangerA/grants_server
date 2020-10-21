@@ -11,10 +11,11 @@ router.get('/grants', async (req, res) => {
   if (!!page && !!limit) {
     //console.log('Diferente Undefined');
     result = await getGrants(page, limit);
+    console.log(result);
     return res.json(result);
   }
   result = await getAllGrants();
-  //console.log(result.length);
+  console.log(result.length);
   return res.json(result);
 });
 
